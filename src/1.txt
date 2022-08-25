@@ -1,0 +1,27 @@
+<Router>
+        <div>
+          <Navbar
+            title="Text Manipulator"
+            redMode={redMode}
+            mode={mode}
+            toggleMode={toggleMode}
+            toggleRedMode={toggleRedMode}
+          />
+          <Alert alert={alert} />
+          <div className="container my-3">
+            <Routes>
+              <Route path="/about">
+                <About />
+              </Route>
+              <Route path="/">
+                <TextForm
+                  heading="Enter Your Text To Analyze"
+                  mode={mode}
+                  redMode={redMode}
+                  showAlert={showAlert}
+                />
+              </Route>
+            </Routes>
+          </div>
+        </div>
+      </Router>
