@@ -53,7 +53,10 @@ export default function TextForm(props) {
         <button className="btn btn-info mx-2 my-2" onClick={handleLowClick}>
           Convert to Lowercase
         </button>
-        <button className="btn btn-secondary mx-2 my-2" onClick={handleDeleteClick}>
+        <button
+          className="btn btn-secondary mx-2 my-2"
+          onClick={handleDeleteClick}
+        >
           Clear Text
         </button>
       </div>
@@ -65,7 +68,7 @@ export default function TextForm(props) {
         <p>
           <p>
             {
-              text.split(" ").filter((element) => {
+              text.split(/\s+/).filter((element) => {
                 return element.length !== 0;
               }).length
             }
